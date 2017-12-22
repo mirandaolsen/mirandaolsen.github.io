@@ -1,0 +1,27 @@
+
+body {
+  margin: 0;
+}
+
+h1 {
+  color: #EAB4B8;
+  background-color: #0A96FA;
+  text-align: center;
+  line-height: 2;
+  font-size: 700%;
+  margin: 0;
+}
+
+div.item {
+  width: 640px;
+  margin: 20px;
+}
+
+.item h2 {
+  text-align: center;
+  margin-bottom: 3px;
+  /* padding: 0.25em; */
+  background-color: #4F3724;
+  color: #DDD3C4;
+  font-size:310%;
+}
