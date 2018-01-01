@@ -4,27 +4,136 @@
   <meta charset="utf-8">
   <meta name="author" content="Miranda Olsen">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-
   <title>Miranda's website.</title>
-
-  <!-- <link href="https://raw.githubusercontent.com/necolas/normalize.css/master/normalize.css" rel="stylesheet" media="all"> -->
-  <link rel="stylesheet" href="styles.css">
+  <link rel='stylesheet' href='https://meyerweb.com/eric/tools/css/reset/reset.css'>
+  <!-- <link rel="stylesheet" href="/styles.css"> -->
   <link rel="icon" href="images/favicon.png">
+  <style>
+    @import url('https://fonts.googleapis.com/css?family=Acme');
+  </style>
+  <style>
+
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: #FAF7E8;
+    color: #2A2724;
+  }
+
+  header h1 {
+    margin: 0;
+    padding: 0;
+    font-family: 'Acme', sans-serif;
+    color: #FAF7E8;
+    background-color: #2A2724;
+    text-align: center;
+    line-height: 2;
+    font-size: 10vw;
+  }
+
+  header h1 a {
+    text-decoration: none;
+  }
+
+  header h1 a:visited {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .preview_item {
+    height: 150px;
+    width: 30em;
+    margin: 0 auto;
+    background-color: #FAF7E8;
+    margin-bottom: 2em;
+  }
+
+  div > img {
+    /* height: 140px; */
+    object-fit: contain;
+    margin-right: 1em;
+    float: left;
+  }
+
+  .preview_item h2 {
+    font-family: 'Acme', sans-serif;
+    padding: 0;
+    margin: 0;
+  }
+
+  .preview_item p {
+    margin: 0;
+    padding: 0;
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    margin-top: 2em;
+  }
+
+  nav {
+    margin: 0;
+    padding: 0.5em;
+    display: block;
+    float: right;
+    /* background-color: red; */
+  }
+
+  nav a {
+    color: inherit;
+    text-decoration: none;
+    font-family: Helvetica;
+    text-transform: uppercase;
+    padding: 1em;
+    text-align: right;
+    margin: 0;
+  }
+
+  .read_more {
+    font-size: 90%;
+    text-transform: uppercase;
+  }
+
+  footer {
+    height: 300px;
+    background-color: #2A2724;
+  }
+
+  </style>
 
 </head>
-
 <body>
-
   <header>
-    <h1><a href='index.html'>MIRANDA</a></h1>
-    <p>I'm Miranda. I live here. Where do you live? Do you live far away?</p>
+    <h1><a href='index.html'>Miranda</a></h1>
+    <nav>
+      <a href='/'>home</a>
+      <a href='about.html'>about</a>
+    </nav>
   </header>
-  <hr/>
-  <div class='item'>
-    <h2>Wolf</h2>
-    <img src='https://c1.staticflickr.com/5/4340/36952540170_9d865787f2_z.jpg'>
-    <p>I went to the <a href='https://nywolf.org'>Wolf Conservation Center</a>.</p>
-    <p>Click <a href='wolfstory.html'>here</a> to read the full story.</p>
-  </div>
+  <ul>
+    <li>
+      <div class='preview_item'>
+        <img src='https://c2.staticflickr.com/8/7436/9470444432_cb3cf804a3_q.jpg'>
+        <div>
+          <h2>Wolf</h2>
+          <p>I went to the <a href='https://nywolf.org'>Wolf Conservation Center</a>. I have always loved wolves. On my seventh birthday, the <a href="https://nywolf.org">Wolf Conservation Center</a> (The WCC) sent me a letter saying that my family and I could camp there.When I went There I met <a href="https://nywolf.org/ambassador-wolves/zephyr">Zephyr</a> and  <a href="https://nywolf.org/ambassador-wolves/atka">Atka</a> for the first time.Wolf babies are called “pups”.  <span class='read_more'><a href='wolfstory.html'>Read more.</a></span></p>
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class='preview_item'>
+        <img src='https://c1.staticflickr.com/7/6054/5879050869_8301caf7c2_q.jpg'>
+        <div>
+          <h2>Orchestra Tour</h2>
+          <p>I went on an Erie Canal tour with my family and the <a href="http://www.albanysymphony.com">Albany Symphony</a>. We went from Albany to Buffalo following the course of the Erie Canal. <span class='read_more'><a href='orchestra_tour.html'>Read more.</a></span></p>
+        </div>
+      </div>
+    </li>
+  </ul>
+  <footer>
+
+  </footer>
 </body>
 </html>
