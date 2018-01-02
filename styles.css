@@ -1,48 +1,92 @@
 body {
-  margin: 0;
-  /* #210703 */
-  background-color: #DDD3C4;
+  background-color: #FAF7E8;
+  color: #2A2724;
+  font: 300 17px/1.7 "Charter", "Georgia", serif;
+  text-rendering: optimizeLegibility;
 }
 
-header a {
+div > img {
+  /* height: 140px; */
+  object-fit: contain;
+  margin-right: 1em;
+  float: left;
+}
+
+.preview_item h2 {
+  font-family: 'Acme', sans-serif;
+  font-size: 110%;
+  padding: 0;
+  margin: 0 0 0.5em 0;
+  /* margin-bottom: 0.3em; */
+}
+
+.preview_item p {
+  margin: 0;
+  padding: 0;
+}
+
+.preview_item .desc {
+  overflow: hidden;
+}
+
+ul.post-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  margin-top: 2em;
+}
+
+nav {
+  margin: 0;
+  padding: 0.5em;
+  display: block;
+  float: right;
+  /* background-color: red; */
+}
+
+nav a {
   color: inherit;
-}
-
-header h1 {
-  color: #DDD3C4;
-  background-color: #0A96FA;
-  text-align: center;
-  line-height: 2;
-  font-size: 10vw;
+  text-decoration: none;
+  font-family: Helvetica;
+  text-transform: uppercase;
+  padding: 1em;
+  text-align: right;
   margin: 0;
 }
 
-header h1 a {
-  text-decoration: none;
-}
-
-header p {
-  margin: 20px;
-}
-
-article {
-  margin: 2em;
-}
-
-article h2 {
-  text-align: center;
-  margin-bottom: 3px;
-  /* padding: 0.25em; */
-  background-color: #4F3724;
-  color: #DDD3C4;
-  font-size:310%;
-}
-
-img {
-  width: 100%;
-  max-width: 300;
+.read_more {
+  font-size: 90%;
+  text-transform: uppercase;
 }
 
 footer {
-  margin: 2em;
+  height: 300px;
+  background-color: #2A2724;
+}
+
+.page-content {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.page-content h1 {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  font-size: 200%;
+}
+
+.page-content img {
+  width: 100%;
+  max-width: 500px;
+  display: block;
+  clear: right;
+  margin: 0;
+  /* padding: 1em; */
+}
+
+.preview_item {
+  width: 30em;
+  margin: 0 auto;
+  background-color: #FAF7E8;
+  margin-bottom: 2em;
 }
