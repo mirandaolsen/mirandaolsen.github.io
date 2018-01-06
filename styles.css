@@ -5,6 +5,12 @@ body {
   text-rendering: optimizeLegibility;
 }
 
+a:visited {
+  color: green;
+}
+
+
+
 div > img {
   /* height: 140px; */
   object-fit: contain;
