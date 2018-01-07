@@ -9,16 +9,18 @@ a:visited {
   color: green;
 }
 
-
-
-div > img {
-  /* height: 140px; */
+.post-list img {
   object-fit: contain;
   margin-right: 1em;
   float: left;
 }
 
-.preview_item h2 {
+.post-list p {
+  margin: 0;
+  padding: 0;
+}
+
+.post-list h2 {
   font-family: 'Acme', sans-serif;
   font-size: 110%;
   padding: 0;
@@ -26,38 +28,19 @@ div > img {
   /* margin-bottom: 0.3em; */
 }
 
-.preview_item p {
-  margin: 0;
-  padding: 0;
+.post-list .desc {
+  overflow: hidden;
 }
 
-.preview_item .desc {
-  overflow: hidden;
+.post-list li {
+  min-height: 150px;
 }
 
 ul.post-list {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  margin-top: 2em;
-}
-
-nav {
-  margin: 0;
-  padding: 0.5em;
-  display: block;
-  float: right;
-  /* background-color: red; */
-}
-
-nav a {
-  color: inherit;
-  text-decoration: none;
-  font-family: Helvetica;
-  text-transform: uppercase;
-  padding: 1em;
-  text-align: right;
-  margin: 0;
+  margin-top: 3em;
 }
 
 .read_more {
