@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>Logo!</title>
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="stylesheet" type="text/css" href="papert.css" />
+  <script type="text/javascript" src="turtle.js"></script>
+  <script type="text/javascript" src="parser.js"></script>
+  <script type="text/javascript" src="logo.js"></script>
+  <script type="text/javascript" src="init.js"></script>
+  <script>
+    function formClicked() {
+      var value = document.getElementById("speedControl").value;
+      var speed = 26 - value
+      console.log(speed);
+      run(speed, (speed > 5));
+    }
+  </script>
+</head>
+
+<body onload="init('canvas','turtle','input', 'textOutput'); clearcanvas(); run(1,false);">
+  <div class='wrapper'>
+    <form id="input" action="/" method="post" onSubmit="this.img.value = canvas.toDataURL().replace('data:image/png;base64,','')">
+      <div id="sketchpad">
+          <div id="textOutput"></div>
+          <div id="turtle"><embed width="20" height="20" src="turtle.svg"/></div>
+          <canvas id="canvas" width="500" height="500"></canvas>
+      </div>
+
+      <div id="content">
+        <textarea name="code" id="code" rows="40" cols="20" spellcheck="false"></textarea>
+        <div style="margin: 5px;">
+          slow<input id='speedControl' style="width:50px;" type="range" name="points" min="1" max="26" step="6">fast
+          <input type='button' onclick="formClicked();" value='run'/>
+          <input type="button" onClick="stop();" value="stop" />
+          <input type="button" onClick="clearcanvas();" value="clear" />
+          <input type="button" onClick="document.location.href = canvas.toDataURL().replace('image/png', 'image/octet-stream')" value="save image" />
+        </div>
+      </div>
+    </form>
+  </div>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="author" content="Miranda Olsen">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <title>Miranda's website.</title>
+  <link rel='stylesheet' href='https://meyerweb.com/eric/tools/css/reset/reset.css'>
+  <link rel="stylesheet" href="/header.css">
+  <link rel="stylesheet" href="/styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Acme" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="logo/papert.css" />
+  <style>
+  .page-content {
+    max-width: 1000px;
+    width: 1000px;
+  }
+  #input {
+    height: 550px;
+  }
+  </style>
+  <script type="text/javascript" src="logo/turtle.js"></script>
+  <script type="text/javascript" src="logo/parser.js"></script>
+  <script type="text/javascript" src="logo/logo.js"></script>
+  <script type="text/javascript" src="logo/init.js"></script>
+  <script type='text/javascript' src='logo/start.js'></script>
+</head>
+<body onload="init('canvas','turtle','input', 'textOutput'); clearcanvas(); loadCode(); run(1,false);">
+  <header>
+    <h1><a href='/'>Miranda</a></h1>
+    <div class='navigation'>
+      <nav>
+        <a href='/'>home</a>
+        <a href='about.html'>about</a>
+      </nav>
+    </div>
+  </header>
+  <div class='page-content'>
+    <main>
+      <h1>Colorful Shapes in Logo.</h1>
+      <form id="input" action="/" method="post" onSubmit="this.img.value = canvas.toDataURL().replace('data:image/png;base64,','')">
+        <div id="sketchpad">
+          <div id="textOutput"></div>
+          <div id="turtle"><embed width="20" height="20" src="logo/turtle.svg"/></div>
+          <canvas id="canvas" width="500" height="500"></canvas>
+        </div>
+        <div id="content">
+          <textarea readonly name="code" id="code" rows="40" cols="20" spellcheck="false"></textarea>
+          <div style="margin: 5px;">
+            slow<input id='speed' style="width:50px;" type="range" name="points" min="1" max="26" step="6">fast
+            <input type='button' onclick="formClicked();" value='run'/>
+            <input type="button" onClick="stop();" value="stop" />
+            <input type="button" onClick="clearcanvas();" value="clear" />
+            <input type="button" onClick="document.location.href = canvas.toDataURL().replace('image/png', 'image/octet-stream')" value="save image" />
+          </div>
+        </div>
+      </form>
+    </main>
+  </div>
+  <footer></footer>
+</body>
+</html>
