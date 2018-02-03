@@ -23,7 +23,7 @@
     function loadCode() {
       var text = `to spiral :radius
   make "n 1
-  repeat 100 [
+  repeat :radius [
     fw :n
     rt 46
     make "n :n+1
@@ -31,7 +31,7 @@
 end
 
 reset
-spiral 100
+spiral 200
       `;
       console.log(text);
       document.getElementById('code').value = text;
