@@ -48,11 +48,6 @@ ul.post-list {
   text-transform: uppercase;
 }
 
-footer {
-  height: 300px;
-  background-color: #2A2724;
-}
-
 .page-content {
   padding-left: 1em;
   padding-right: 1em;
@@ -82,4 +77,10 @@ footer {
   margin: 0 auto;
   background-color: #FAF7E8;
   margin-bottom: 2em;
+}
+
+footer {
+  background-color: #2A2724;
+  color: white;
+  padding: 1em;
 }
