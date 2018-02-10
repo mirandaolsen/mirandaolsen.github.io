@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="author" content="Miranda Olsen">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <title>I am Making Logo Programs!</title>
+  <link rel='stylesheet' href='https://meyerweb.com/eric/tools/css/reset/reset.css'>
+  <link rel="stylesheet" href="/header.css">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="icon" href="images/favicon.png">
+  <link href="https://fonts.googleapis.com/css?family=Acme" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="../logo/papert.css" />
+  <script type="text/javascript" src="../logo/turtle.js"></script>
+  <script type="text/javascript" src="../logo/parser.js"></script>
+  <script type="text/javascript" src="../logo/logo.js"></script>
+  <script type="text/javascript" src="../logo/init.js"></script>
+  <script>
+  function formClicked() {
+    var value = document.getElementById("speed").value;
+    var speed = 26 - value
+    console.log(speed);
+    run(speed, (speed > 5));
+  }
+  function loadCode() {
+    var text = `reset
+
+    to sky
+    color [212 242 249]
+    setxy 0 250
+    penwidth 500
+    rt 90
+    fw 500
+    end
+
+    sky
+
+    to stem :x :y
+    rt 180
+    color [105 131 20 ]
+    penwidth 20
+    fw 250
+    end
+
+    home
+    stem 250 250
+
+    home
+
+    to randomcolor
+    make "r rand 255
+    make "g rand 255
+    make "b rand 255
+    color [:r :g :b]
+    end
+
+    to diamond :length :angle
+    repeat 2 [
+      fw :length
+      rt :angle
+      fw :length
+      rt 180 - :angle
+    ]
+    end
+
+    to randompetal :width :petallength :count :angle
+    repeat :count [
+      penwidth :width
+      randomcolor
+      make "l :petallength
+      repeat 20 [
+        diamond :l 10
+        make "l :l - 5
+      ]
+      rt :angle
+    ]
+
+
+    end
+
+    to overlappingpetal :width :petallength :count :angle
+    repeat :count [
+      penwidth :width
+      randomcolor
+      make "l :petallength
+      repeat 20 [
+        diamond :l 10
+        make "l :l - 5
+      ]
+      rt :angle
+    ]
+    rt 17
+    end
+
+    to petals
+    overlappingpetal 4 100 30 12
+    overlappingpetal 4 100 30 12
+
+    end
+
+    petals
+
+    to seed
+    color [71 38 24]
+    penwidth 80
+    circle 1
+    end
+
+    home
+
+    to dot :radius
+    make "n 1
+    penwidth 2
+    color [254 217 15]
+    repeat :radius [
+      pu
+      fw :n
+      pd
+      circle 1
+      rt 83
+      make "n :n+1
+    ]
+    end
+
+    seed
+
+    home
+    dot 50
+    `;
+    console.log(text);
+    document.getElementById('code').value = text;
+  }
+  </script>
+</head>
+<body onload="init('canvas','turtle','input', 'textOutput'); clearcanvas(); loadCode(); run(1,false);">
+  <header>
+    <h1><a href='index.html'>Miranda</a></h1>
+    <div class='navigation'>
+      <nav>
+        <a href='/'>home</a>
+        <a href='about.html'>about</a>
+      </nav>
+    </div>
+  </header>
+  <div class='page-content'>
+    <h1>I am Making Logo Programs!</h1>
+    <p>I'm good at making Logo programs! They are fun to make! I made a program to make a flower. I made it on Logo. Here are a few of my programs:</p>
+    <form id="input" action="/" method="post" onSubmit="this.img.value = canvas.toDataURL().replace('data:image/png;base64,','')">
+      <div id="sketchpad">
+        <div id="textOutput"></div>
+        <div id="turtle"><embed width="20" height="20" src="../logo/turtle.svg"/></div>
+        <canvas id="canvas" width="500" height="500"></canvas>
+      </div>
+      <div id="content">
+        <div style="margin: 5px;">
+          slow<input id='speed' style="width:150px;" type="range" name="points" min="1" max="26" value="26">fast
+          <input type='button' onclick="formClicked();" value='run'/>
+          <input type="button" onClick="stop();" value="stop" />
+          <input type="button" onClick="clearcanvas();" value="clear" />
+          <input type="button" onClick="document.location.href = canvas.toDataURL().replace('image/png', 'image/octet-stream')" value="save image" />
+        </div>
+        <textarea name="code" id="code" rows="20" cols="20" spellcheck="false"></textarea>
+        <!-- <div style="margin: 5px;">
+          slow<input id='speed' style="width:150px;" type="range" name="points" min="1" max="26" value="26">fast
+          <input type='button' onclick="formClicked();" value='run'/>
+          <input type="button" onClick="stop();" value="stop" />
+          <input type="button" onClick="clearcanvas();" value="clear" />
+          <input type="button" onClick="document.location.href = canvas.toDataURL().replace('image/png', 'image/octet-stream')" value="save image" />
+        </div> -->
+      </div>
+    </form>
+  </div>
+
+  <footer style='clear:both;'>
+    <p>This website was made by Miranda Olsen. &copy; 2018. All rights reserved!!!</p>
+    <ul>
+      <li>The source code is available on <a href='https://github.com/mirandaolsen/mirandaolsen.github.io'>Github</a>.</li>
+      <li>You can <a href='https://www.chess.com/member/miranda-olsen'>play a chess game</a> with me.</li>
+    </ul>
+  </footer>
+</body>
+</html>
