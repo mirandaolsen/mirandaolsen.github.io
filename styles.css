@@ -54,7 +54,7 @@ ul.post-list {
   max-width: 780px;
   margin-left: auto;
   margin-right: auto;
-  padding-bottom: 4em;
+  /* padding-bottom: 4em; */
 }
 
 .page-content h1 {
